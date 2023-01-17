@@ -1,6 +1,24 @@
 import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
-import { Input, Button, Form, FormGroup, FormFeedback } from "reactstrap";
+import {
+  Input,
+  Button,
+  Form,
+  FormGroup,
+  FormFeedback,
+  Label,
+  CardImg,
+  CardGroup,
+  CardTitle,
+  CardBody,
+  Card,
+  CardText,
+  CardSubtitle,
+} from "reactstrap";
+import sides from "../food-data/sides.js";
+import protein from "../food-data/protein.js";
+import veggies from "../food-data/greens-veggies";
+import FoodCard from "../components/FoodCard.jsx";
 
 export default function BuildMarmita() {
   const {
@@ -14,30 +32,40 @@ export default function BuildMarmita() {
     console.log(data);
   };
 
-  const sides = "rice beans mashed-potato pasta egg corn farofa".split(" ");
-
   return (
-    <div className="App">
+    <>
+      <h1 className="d-flex justify-content-center">
+        Welcome to Vovó's Kitchen
+      </h1>
+      <h3 className="d-flex justify-content-center">
+        It is time to build your own marmita:
+      </h3>
       <Form onSubmit={handleSubmit(onSubmit)}>
-        <FormGroup>
-          {sides.map((c, i) => (
-            <label key={c}>
-              <input type="checkbox" value={c} name="sameName" ref={register} />
-              {c}
-            </label>
-          ))}
-          {/* <input
-            type="checkbox"
-            value="name"
-            id="name"
-            invalid={errors?.name}
-            {...register("name")}
-          /> */}
-        </FormGroup>
+        <CardGroup>
+          <FoodCard
+            register={register}
+            qty="2"
+            title={"Entree"}
+            data={sides}
+          ></FoodCard>
+          <FoodCard
+            register={register}
+            qty="3"
+            title={"Protein"}
+            data={protein}
+          ></FoodCard>
+
+          <FoodCard
+            register={register}
+            qty="2"
+            title={"Greens + Veggies"}
+            data={veggies}
+          ></FoodCard>
+        </CardGroup>
         <Button type="submit" color="primary">
           Submit
         </Button>
       </Form>
-    </div>
+    </>
   );
 }
