@@ -1,20 +1,6 @@
 import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
-import {
-  Input,
-  Button,
-  Form,
-  FormGroup,
-  FormFeedback,
-  Label,
-  CardImg,
-  CardGroup,
-  CardTitle,
-  CardBody,
-  Card,
-  CardText,
-  CardSubtitle,
-} from "reactstrap";
+import { Button, Form, CardGroup } from "reactstrap";
 import sides from "../food-data/sides.js";
 import protein from "../food-data/protein.js";
 import veggies from "../food-data/greens-veggies";
@@ -34,9 +20,6 @@ export default function BuildMarmita() {
 
   return (
     <>
-      <h1 className="d-flex justify-content-center">
-        Welcome to Vovó's Kitchen
-      </h1>
       <h3 className="d-flex justify-content-center">
         It is time to build your own marmita:
       </h3>
@@ -44,17 +27,16 @@ export default function BuildMarmita() {
         <CardGroup>
           <FoodCard
             register={register}
-            qty="2"
-            title={"Entree"}
-            data={sides}
-          ></FoodCard>
-          <FoodCard
-            register={register}
             qty="3"
             title={"Protein"}
             data={protein}
           ></FoodCard>
-
+          <FoodCard
+            register={register}
+            qty="2"
+            title={"Sides"}
+            data={sides}
+          ></FoodCard>
           <FoodCard
             register={register}
             qty="2"
@@ -63,7 +45,7 @@ export default function BuildMarmita() {
           ></FoodCard>
         </CardGroup>
         <Button type="submit" color="primary">
-          Submit
+          Add to Cart
         </Button>
       </Form>
     </>

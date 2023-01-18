@@ -12,6 +12,7 @@ import Contact from "./routes/contact";
 import Homepage from "./routes/homepage";
 import Cart from "./routes/cart";
 import BuildMarmita from "./routes/build-marmita";
+import NavBar from "./components/NavBar";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
+    <NavBar />
     <RouterProvider router={router} />
   </React.StrictMode>
 );
