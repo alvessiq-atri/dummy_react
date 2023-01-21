@@ -1,9 +1,10 @@
-import { Form } from "react-router-dom";
+import { Form, useParams } from "react-router-dom";
 
 export default function Contact() {
+  let { contactId } = useParams();
   const contact = {
-    first: "Your",
-    last: "Name",
+    id: contactId,
+    name: "Your name",
     avatar: "https://placekitten.com/g/200/200",
     twitter: "your_handle",
     notes: "Some notes",
@@ -13,18 +14,14 @@ export default function Contact() {
   return (
     <div id="contact">
       <div>
-        <img
-          key={contact.avatar}
-          src={contact.avatar || null}
-          alt=""
-        />
+        <img key={contact.avatar} src={contact.avatar || null} alt="" />
       </div>
 
       <div>
         <h1>
-          {contact.first || contact.last ? (
+          {contact.id || contact.name ? (
             <>
-              {contact.first} {contact.last}
+              {contact.id} {contact.name}
             </>
           ) : (
             <i>No Name</i>
@@ -36,7 +33,8 @@ export default function Contact() {
           <p>
             <a
               target="_blank"
-              href={`https://twitter.com/${contact.twitter}`} rel="noreferrer"
+              href={`https://twitter.com/${contact.twitter}`}
+              rel="noreferrer"
             >
               {contact.twitter}
             </a>
@@ -55,9 +53,7 @@ export default function Contact() {
             onSubmit={(event) => {
               if (
                 // eslint-disable-next-line no-restricted-globals
-                !confirm(
-                  "Please confirm you want to delete this record."
-                )
+                !confirm("Please confirm you want to delete this record.")
               ) {
                 event.preventDefault();
               }
@@ -79,11 +75,7 @@ function Favorite({ contact }) {
       <button
         name="favorite"
         value={favorite ? "false" : "true"}
-        aria-label={
-          favorite
-            ? "Remove from favorites"
-            : "Add to favorites"
-        }
+        aria-label={favorite ? "Remove from favorites" : "Add to favorites"}
       >
         {favorite ? "★" : "☆"}
       </button>

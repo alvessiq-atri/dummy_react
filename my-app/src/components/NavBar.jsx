@@ -13,7 +13,6 @@ import {
   DropdownItem,
   NavbarText,
 } from "reactstrap";
-import Homepage from "../routes/homepage";
 import Header from "./Header";
 import ModalDemo from "./Modal";
 

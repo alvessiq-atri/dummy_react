@@ -24,10 +24,10 @@ export default function Header() {
         ></CardImg>
         <CardBody>
           <CardTitle className="d-flex justify-content-center">
-            <h1>Welcome to Vovó's Kitchen</h1>
+            <h1>Vovó's Kitchen</h1>
           </CardTitle>
           <CardText className="d-flex justify-content-center">
-            Open from 10am - 8pm (Monday-Friday)
+            Menu application
           </CardText>
           <CardText className="d-flex justify-content-center"></CardText>
         </CardBody>

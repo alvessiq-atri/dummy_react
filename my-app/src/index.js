@@ -10,7 +10,7 @@ import reportWebVitals from "./reportWebVitals";
 import Contact from "./routes/contact";
 // import App from './App';
 import Homepage from "./routes/homepage";
-import Cart from "./routes/cart";
+import EditMenu from "./routes/edit-menu";
 import BuildMarmita from "./routes/build-marmita";
 import NavBar from "./components/NavBar";
 
@@ -29,8 +29,8 @@ const router = createBrowserRouter([
     element: <BuildMarmita />,
   },
   {
-    path: "/cart",
-    element: <Cart />,
+    path: "/:plateId",
+    element: <EditMenu />,
   },
 ]);
 
