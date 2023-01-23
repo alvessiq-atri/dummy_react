@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   FormGroup,
   Label,
@@ -10,7 +10,8 @@ import {
   CardSubtitle,
 } from "reactstrap";
 
-export default function FoodCard({ register, data, title, qty }) {
+export default function FoodCard({ register, data, title }) {
+  const [foodData, setFoodData] = useState(data);
   return (
     <Card>
       {/* <CardImg
@@ -23,21 +24,10 @@ export default function FoodCard({ register, data, title, qty }) {
         <CardTitle tag="h5" className="d-flex justify-content-center">
           {title}
         </CardTitle>
-        <CardSubtitle
-          className="mb-2 text-muted d-flex justify-content-center"
-          tag="h6"
-        >
-          Choose up to {qty}
-        </CardSubtitle>
         <CardText>
-          {data.map((c) => (
+          {foodData.map((c) => (
             <FormGroup className="d-flex justify-content-center">
-              <input
-                type="checkbox"
-                value={c}
-                name="sameName"
-                {...register(c)}
-              />
+              <input type="checkbox" value={c} name={c} {...register} />
               <Label key={c}>{c}</Label>
             </FormGroup>
           ))}

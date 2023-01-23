@@ -1,9 +1,9 @@
 const veggies = [
-  "Spring Mix",
-  "Corn",
-  "Carrots",
-  "Broccoli",
-  "Green Pepper",
-  "No Veggies",
+  "spring mix",
+  "corn",
+  "carrots",
+  "broccoli",
+  "green pepper",
+  "no veggies",
 ];
 export default veggies;

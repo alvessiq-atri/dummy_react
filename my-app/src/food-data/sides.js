@@ -1,9 +1,9 @@
 const sides = [
-  "Rice",
-  "Beans",
-  "Mashed Potato",
-  "Pasta",
-  "French Fries",
-  "No sides",
+  "rice",
+  "beans",
+  "mashed potato",
+  "pasta",
+  "french fries",
+  "no sides",
 ];
 export default sides;

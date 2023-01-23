@@ -11,7 +11,6 @@ import Contact from "./routes/contact";
 // import App from './App';
 import Homepage from "./routes/homepage";
 import EditMenu from "./routes/edit-menu";
-import BuildMarmita from "./routes/build-marmita";
 import NavBar from "./components/NavBar";
 
 const router = createBrowserRouter([
@@ -23,10 +22,6 @@ const router = createBrowserRouter([
   {
     path: "contacts/:contactId",
     element: <Contact />,
-  },
-  {
-    path: "/build-marmita",
-    element: <BuildMarmita />,
   },
   {
     path: "/:plateId",

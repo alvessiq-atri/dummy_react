@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { useTable } from "react-table";
 import { Button } from "reactstrap";
 import { Link } from "react-router-dom";
-import menu from "../food-data/menu";
 import axios from "axios";
 
 const Styles = styled.div`
@@ -42,9 +41,7 @@ function Table({ columns, data }) {
       columns,
       data,
     });
-  //   console.log(makeData(10));
 
-  // Render the UI for your table
   return (
     <table {...getTableProps()}>
       <thead>

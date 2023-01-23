@@ -31,7 +31,7 @@ const menu = [
     id: 5,
     name: "Natal",
     vovofav: "",
-    ingredients: ["egg, beef", "rice", "spring mix"],
+    ingredients: ["egg", "beef", "rice", "spring mix"],
     img: "To be added",
   },
   {

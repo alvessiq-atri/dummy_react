@@ -1,9 +1,10 @@
 const protein = [
-  "Chicken Breasts",
-  "Eggs",
-  "Salmon",
-  "Pork",
-  "Ground Beef",
-  "Sausage",
+  "chicken breast",
+  "egg",
+  "salmon",
+  "pork",
+  "ground beef",
+  "sausage",
+  "beef",
 ];
 export default protein;

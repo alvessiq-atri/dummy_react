@@ -17,7 +17,7 @@ export default function Homepage() {
   return (
     <>
       <Col className="d-flex justify-content-center">
-        <Button href="/build-marmita" color="warning">
+        <Button href="/" color="warning">
           Order Now!
         </Button>
       </Col>
