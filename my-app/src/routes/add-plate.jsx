@@ -31,7 +31,7 @@ export default function AddPlate() {
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Label>
           Name:
-          <input id="namePlate" {...register("name")}></input>
+          <input required id="namePlate" {...register("name")}></input>
         </Label>
         <br></br>
         <Label>Vovó's Fav:</Label>
@@ -48,6 +48,7 @@ export default function AddPlate() {
         <Label>
           No
           <input
+            defaultChecked
             id="vovofav"
             value="no"
             name={"no"}

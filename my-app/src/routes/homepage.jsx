@@ -17,9 +17,6 @@ export default function Homepage() {
   return (
     <>
       {/* <Col idclassName="d-flex justify-content-center"> */}
-      <Button href="/add-plate" color="warning">
-        Add New Plate
-      </Button>
       <ReactTable />
     </>
   );

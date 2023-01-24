@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import menu from "../food-data/menu";
 import { useForm } from "react-hook-form";
 import { Button, Form, CardGroup, Label } from "reactstrap";
@@ -13,6 +13,7 @@ import Select from "react-select";
 
 export default function EditMenu({ data }) {
   const [plate, setPlate] = useState({});
+  const navigate = useNavigate();
 
   useEffect(() => {
     setPlate(data);
@@ -25,6 +26,18 @@ export default function EditMenu({ data }) {
       plate,
     },
   });
+
+  const onDeleteClick = () => {
+    console.log("inside the ondeleteClick");
+    (async () => {
+      const result = await axios.delete(
+        "http://localhost:8000/menu/" + plate.id,
+        data
+      );
+      console.log(result);
+    })();
+    navigate("/");
+  };
 
   const onSubmit = (data) => {
     console.log(data);
@@ -42,7 +55,6 @@ export default function EditMenu({ data }) {
       {/* This is plate with id: {plate.id}.<h1> {plate.name}</h1>
       <h2>Ingredients are: {plate.ingredients + ""}</h2>
       <h2>Vovo's fav: {plate.vovofav}</h2> */}
-      <h3 className="d-flex justify-content-center">Edit plate:</h3>
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Label>
           Name:
@@ -96,6 +108,10 @@ export default function EditMenu({ data }) {
           Submit
         </Button>
       </Form>
+      <br></br>
+      <Button color="warning" onClick={onDeleteClick}>
+        Delete Plate
+      </Button>
     </div>
   );
 }

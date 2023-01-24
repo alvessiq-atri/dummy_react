@@ -11,20 +11,32 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
+  CardImg,
+  Button,
   NavbarText,
 } from "reactstrap";
 import Header from "./Header";
+import vovoheader from "../imgs/vovokitchen.png";
 
 function NavBar(args) {
   return (
     <div>
-      <Navbar {...args} className="navbar fixed-top bg-light">
-        <NavbarBrand id="within-navbar" href="/">
-          Vovó's Kitchen
-        </NavbarBrand>
-        <NavbarText>{/* Simple Text */}</NavbarText>
+      <Navbar className="navbar fixed-top bg-light">
+        <NavbarBrand href="/">Vovó's Kitchen</NavbarBrand>
+        <NavbarText>
+          <Button href="/add-plate" color="warning">
+            Add New Plate
+          </Button>
+        </NavbarText>
       </Navbar>
-      <Header />
+      <CardImg
+        alt="Vovo image"
+        src={vovoheader}
+        //   style={{ height: 500 }}
+        top
+        width="100%"
+      ></CardImg>
+      {/* <Header /> */}
     </div>
   );
 }

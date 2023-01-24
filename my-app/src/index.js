@@ -7,7 +7,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 // import Root from './routes/root';
 // import ErrorPage from './error-page';
-import Contact from "./routes/contact";
 // import App from './App';
 import Homepage from "./routes/homepage";
 import EditMenu from "./routes/edit-menu";
@@ -28,14 +27,12 @@ const router = createBrowserRouter([
   {
     path: "/:plateId",
     element: <ParentEditMenu />,
-    // element: <EditMenu />,
   },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    {/* <App /> */}
     <NavBar />
     <RouterProvider router={router} />
   </React.StrictMode>

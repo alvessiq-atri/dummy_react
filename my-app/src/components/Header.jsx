@@ -26,9 +26,9 @@ export default function Header() {
           <CardTitle className="d-flex justify-content-center">
             <h1>Vovó's Kitchen</h1>
           </CardTitle>
-          <CardText className="d-flex justify-content-center">
+          {/* <CardText className="d-flex justify-content-center">
             Menu application
-          </CardText>
+          </CardText> */}
           <CardText className="d-flex justify-content-center"></CardText>
         </CardBody>
       </Card>
