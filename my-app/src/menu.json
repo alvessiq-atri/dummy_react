@@ -98,18 +98,6 @@
       "id": 8
     },
     {
-      "name": "Grumari",
-      "vovofav": "yes",
-      "ingredients": [
-        "egg",
-        "beef",
-        "rice",
-        "french fries",
-        "carrots"
-      ],
-      "id": 9
-    },
-    {
       "name": "Recife",
       "vovofav": "no",
       "ingredients": [
