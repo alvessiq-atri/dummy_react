@@ -12,6 +12,8 @@ import Contact from "./routes/contact";
 import Homepage from "./routes/homepage";
 import EditMenu from "./routes/edit-menu";
 import NavBar from "./components/NavBar";
+import ParentEditMenu from "./components/parent-edit-menu";
+import AddPlate from "./routes/add-plate";
 
 const router = createBrowserRouter([
   {
@@ -20,12 +22,13 @@ const router = createBrowserRouter([
     // errorElement: <ErrorPage/>
   },
   {
-    path: "contacts/:contactId",
-    element: <Contact />,
+    path: "/add-plate",
+    element: <AddPlate />,
   },
   {
     path: "/:plateId",
-    element: <EditMenu />,
+    element: <ParentEditMenu />,
+    // element: <EditMenu />,
   },
 ]);
 

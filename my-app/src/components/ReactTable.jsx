@@ -104,7 +104,6 @@ function ReactTable() {
         {
           Header: "Ingredients",
           accessor: (row) => row.ingredients + " ",
-          // {console.log(row.ingredients)},
         },
         {
           Header: "Button",

@@ -17,8 +17,8 @@ export default function Homepage() {
   return (
     <>
       <Col className="d-flex justify-content-center">
-        <Button href="/" color="warning">
-          Order Now!
+        <Button href="/add-plate" color="warning">
+          Add New Plate
         </Button>
       </Col>
       <ReactTable />

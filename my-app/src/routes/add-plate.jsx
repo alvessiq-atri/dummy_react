@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import menu from "../food-data/menu";
+import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { Button, Form, CardGroup, Label } from "reactstrap";
 import sides from "../food-data/sides.js";
@@ -8,45 +7,31 @@ import protein from "../food-data/protein.js";
 import veggies from "../food-data/greens-veggies";
 import FoodCard from "../components/FoodCard.jsx";
 import axios from "axios";
-import useMenu from "../useMenu";
-import Select from "react-select";
 
-export default function EditMenu({ data }) {
-  const [plate, setPlate] = useState({});
-
-  useEffect(() => {
-    setPlate(data);
-    // console.log(plate);
-    reset(data);
-  }, [data]);
-
-  const { register, handleSubmit, errors, reset } = useForm({
-    defaultValues: {
-      plate,
-    },
-  });
+export default function AddPlate() {
+  const { register, handleSubmit, errors, reset } = useForm({});
+  const navigate = useNavigate();
 
   const onSubmit = (data) => {
     console.log(data);
-    // (async () => {
-    //   const result = await axios.put(
-    //     "http://localhost:8000/menu/" + plate.id,
-    //     data
-    //   );
-    //   console.log(result);
-    // })();
+    (async () => {
+      const result = await axios.post("http://localhost:8000/menu/", data);
+      console.log(result);
+    })();
+
+    navigate("/");
   };
 
   return (
     <div>
       {/* This is plate with id: {plate.id}.<h1> {plate.name}</h1>
-      <h2>Ingredients are: {plate.ingredients + ""}</h2>
-      <h2>Vovo's fav: {plate.vovofav}</h2> */}
-      <h3 className="d-flex justify-content-center">Edit plate:</h3>
+        <h2>Ingredients are: {plate.ingredients + ""}</h2>
+        <h2>Vovo's fav: {plate.vovofav}</h2> */}
+      <h3 className="d-flex justify-content-center">Add plate:</h3>
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Label>
           Name:
-          <input id="namePlate" name={plate.name} {...register("name")}></input>
+          <input id="namePlate" {...register("name")}></input>
         </Label>
         <br></br>
         <Label>Vovó's Fav:</Label>
@@ -71,10 +56,10 @@ export default function EditMenu({ data }) {
           />
         </Label>
         {/* <input
-          id="vovofav"
-          name={plate.vovofav}
-          {...register("vovofav")}
-        ></input> */}
+            id="vovofav"
+            name={plate.vovofav}
+            {...register("vovofav")}
+          ></input> */}
         <CardGroup>
           <FoodCard
             register={{ ...register("ingredients") }}

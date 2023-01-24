@@ -14,17 +14,13 @@ import {
   NavbarText,
 } from "reactstrap";
 import Header from "./Header";
-import ModalDemo from "./Modal";
 
 function NavBar(args) {
   return (
     <div>
       <Navbar {...args} className="navbar fixed-top bg-light">
         <NavbarBrand href="/">Vovó's Kitchen</NavbarBrand>
-        <NavbarText>
-          <ModalDemo args={"test"} />
-          {/* Simple Text */}
-        </NavbarText>
+        <NavbarText>{/* Simple Text */}</NavbarText>
       </Navbar>
       <Header />
     </div>

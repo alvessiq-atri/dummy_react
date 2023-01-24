@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Rio",
-      "vovofav": "🥰",
+      "vovofav": "yes",
       "ingredients": [
         "egg",
         "beef",
@@ -16,7 +16,7 @@
     {
       "id": 2,
       "name": "Floripa",
-      "vovofav": "",
+      "vovofav": "no",
       "ingredients": [
         "chicken breast",
         "pasta",
@@ -27,7 +27,7 @@
     {
       "id": 3,
       "name": "Manaus",
-      "vovofav": "🥰",
+      "vovofav": "yes",
       "ingredients": [
         "pork",
         "rice",
@@ -40,18 +40,19 @@
     {
       "id": 4,
       "name": "Pipa",
-      "vovofav": "",
+      "img": "To be added",
+      "vovofav": "no",
       "ingredients": [
-        "ground beef",
-        "mashed potato",
-        "green pepper"
-      ],
-      "img": "To be added"
+        "chicken breast",
+        "pork",
+        "pasta",
+        "spring mix"
+      ]
     },
     {
       "id": 5,
       "name": "Natal",
-      "vovofav": "",
+      "vovofav": "yes",
       "ingredients": [
         "egg",
         "beef",
@@ -63,7 +64,7 @@
     {
       "id": 6,
       "name": "Recife",
-      "vovofav": "",
+      "vovofav": "no",
       "ingredients": [
         "sausage",
         "pasta",
@@ -74,7 +75,7 @@
     {
       "id": 7,
       "name": "Buzios",
-      "vovofav": "🥰",
+      "vovofav": "yes",
       "ingredients": [
         "egg",
         "beef",
@@ -86,7 +87,7 @@
     },
     {
       "name": "Jundiai",
-      "vovofav": "🥰",
+      "vovofav": "no",
       "ingredients": [
         "salmon",
         "french fries",
@@ -95,6 +96,102 @@
       ],
       "img": "To be added",
       "id": 8
+    },
+    {
+      "name": "Grumari",
+      "vovofav": "yes",
+      "ingredients": [
+        "egg",
+        "beef",
+        "rice",
+        "french fries",
+        "carrots"
+      ],
+      "id": 9
+    },
+    {
+      "name": "Recife",
+      "vovofav": "no",
+      "ingredients": [
+        "salmon",
+        "rice",
+        "spring mix"
+      ],
+      "id": 10
+    }
+  ],
+  "protein": [
+    {
+      "id": 1,
+      "name": "chicken breast"
+    },
+    {
+      "id": 2,
+      "name": "egg"
+    },
+    {
+      "id": 3,
+      "name": "salmon"
+    },
+    {
+      "id": 4,
+      "name": "pork"
+    },
+    {
+      "id": 5,
+      "name": "ground beef"
+    },
+    {
+      "id": 6,
+      "name": "sausage"
+    },
+    {
+      "id": 7,
+      "name": "beef"
+    }
+  ],
+  "sides": [
+    {
+      "id": 1,
+      "name": "rice"
+    },
+    {
+      "id": 2,
+      "name": "beans"
+    },
+    {
+      "id": 3,
+      "name": "mashed potato"
+    },
+    {
+      "id": 4,
+      "name": "pasta"
+    },
+    {
+      "id": 5,
+      "name": "french fries"
+    }
+  ],
+  "greens-veggies": [
+    {
+      "id": 1,
+      "name": "spring mix"
+    },
+    {
+      "id": 2,
+      "name": "corn"
+    },
+    {
+      "id": 3,
+      "name": "carrots"
+    },
+    {
+      "id": 4,
+      "name": "broccoli"
+    },
+    {
+      "id": 5,
+      "name": "green pepper"
     }
   ]
 }

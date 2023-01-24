@@ -1,17 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   FormGroup,
   Label,
-  CardImg,
   CardTitle,
   CardBody,
   Card,
   CardText,
-  CardSubtitle,
 } from "reactstrap";
 
 export default function FoodCard({ register, data, title }) {
-  const [foodData, setFoodData] = useState(data);
+  // console.log(data);
   return (
     <Card>
       {/* <CardImg
@@ -25,7 +23,7 @@ export default function FoodCard({ register, data, title }) {
           {title}
         </CardTitle>
         <CardText>
-          {foodData.map((c) => (
+          {data.map((c) => (
             <FormGroup className="d-flex justify-content-center">
               <input type="checkbox" value={c} name={c} {...register} />
               <Label key={c}>{c}</Label>
