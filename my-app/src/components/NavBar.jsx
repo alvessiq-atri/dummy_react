@@ -19,7 +19,9 @@ function NavBar(args) {
   return (
     <div>
       <Navbar {...args} className="navbar fixed-top bg-light">
-        <NavbarBrand href="/">Vovó's Kitchen</NavbarBrand>
+        <NavbarBrand id="within-navbar" href="/">
+          Vovó's Kitchen
+        </NavbarBrand>
         <NavbarText>{/* Simple Text */}</NavbarText>
       </Navbar>
       <Header />
